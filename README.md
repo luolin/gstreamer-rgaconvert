@@ -10,7 +10,7 @@ mkdir build
 
 cd build
 
-meson
+meson --prefix=/usr
 
 #sudo ninja install
 
