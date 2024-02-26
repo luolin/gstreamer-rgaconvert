@@ -1,4 +1,4 @@
-/* GStreamer
+    /* GStreamer
  * Copyright (C) 2021 FIXME <fixme@example.com>
  *
  * This library is free software; you can redistribute it and/or
@@ -393,6 +393,7 @@ gst_rga_convert_transform_frame(GstVideoFilter *filter, GstVideoFrame *inframe,
         return GST_FLOW_ERROR;
 
     gboolean ret = TRUE;
+    //src_info.rotation = HAL_TRANSFORM_ROT_270;
     if (c_RkRgaBlit(&src_info, &dst_info, NULL) < 0)
     {
         GST_WARNING_OBJECT(filter, "failed to blit");
